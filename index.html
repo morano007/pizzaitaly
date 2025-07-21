@@ -1,33 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Italian Restaurant & Deli – Buriram</title>
+  <title>Italian Restaurant & Deli For Sale – Buriram</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" />
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: sans-serif;
       margin: 0;
       padding: 0;
-      background: #fafafa;
+      background-color: #f5f5f5;
+      color: #333;
     }
-    header, footer {
-      background: #333;
+    header {
+      background-color: #900;
       color: white;
-      padding: 1rem;
+      padding: 1em;
       text-align: center;
     }
+    nav {
+      text-align: center;
+      margin-top: 1em;
+    }
     nav button {
-      margin: 0 10px;
-      padding: 0.5rem 1rem;
-      font-weight: bold;
+      margin: 0 5px;
+      padding: 0.5em 1em;
       cursor: pointer;
     }
-    .container {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
+    section {
+      max-width: 800px;
+      margin: 2em auto;
+      padding: 1em;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
     .gallery {
       display: flex;
@@ -35,108 +43,112 @@
       gap: 10px;
       justify-content: center;
     }
-    .gallery a {
-      width: calc(33% - 10px);
-    }
     .gallery img {
-      width: 100%;
+      width: 150px;
+      height: auto;
       border-radius: 8px;
     }
-    .lang { display: none; }
-    .active { display: block; }
-    h2 { margin-top: 2rem; }
-    .contact-links a { display: block; margin-bottom: 5px; }
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 1em;
+      margin-top: 2em;
+    }
   </style>
 </head>
+
 <body>
   <header>
-    <h1>🍝 Italian Restaurant & Deli – Buriram</h1>
-    <nav>
-      <button onclick="switchLang('en')">🇬🇧 English</button>
-      <button onclick="switchLang('it')">🇮🇹 Italiano</button>
-      <button onclick="switchLang('th')">🇹🇭 ไทย</button>
-    </nav>
+    <h1 id="title">Italian Restaurant & Deli For Sale – Buriram</h1>
   </header>
 
-  <div class="container">
-    <section id="en" class="lang active">
-      <h2>Welcome</h2>
-      <p>Fully operational Italian restaurant & pizzeria with a loyal customer base. Includes a deli shop selling Italian products, strong wine sales, and guesthouse potential upstairs.</p>
-      <h2>What's Included</h2>
-      <ul>
-        <li>Restaurant & pizzeria with loyal clientele</li>
-        <li>Shop selling Italian cheese, cold cuts, olive oil, etc.</li>
-        <li>Direct import supplier contacts</li>
-        <li>Low rent: 13,000 THB/month</li>
-        <li>8 bedrooms + 6 bathrooms – guesthouse ready</li>
-        <li>Full kitchen equipment, air-conditioned dining area, large outdoor space</li>
-        <li>Training included (2–4 weeks)</li>
-        <li><strong>Asking price: 1,500,000 THB (negotiable)</strong></li>
-      </ul>
-    </section>
+  <nav>
+    <button onclick="switchLang('en')">EN</button>
+    <button onclick="switchLang('it')">IT</button>
+    <button onclick="switchLang('th')">TH</button>
+  </nav>
 
-    <section id="it" class="lang">
-      <h2>Benvenuto</h2>
-      <p>Ristorante-pizzeria italiano completamente operativo con clientela fidelizzata. Comprende un negozio di prodotti italiani, forte vendita di vini e possibilità di creare un affittacamere ai piani superiori.</p>
-      <h2>Cosa è incluso</h2>
-      <ul>
-        <li>Ristorante e pizzeria ben avviati</li>
-        <li>Negozio con prodotti tipici italiani (formaggi, salumi, olio, ecc.)</li>
-        <li>Contatti con fornitori diretti</li>
-        <li>Affitto basso: 13.000 THB/mese</li>
-        <li>8 camere da letto + 6 bagni – adatto ad affittacamere</li>
-        <li>Cucina attrezzata, sala con aria condizionata, ampio dehor esterno</li>
-        <li>Affiancamento incluso (2–4 settimane)</li>
-        <li><strong>Prezzo richiesto: 1.500.000 THB trattabili</strong></li>
-      </ul>
-    </section>
-
-    <section id="th" class="lang">
-      <h2>ยินดีต้อนรับ</h2>
-      <p>ร้านอาหารอิตาเลียนเปิดดำเนินงานเต็มรูปแบบ พร้อมลูกค้าประจำ ร้านค้าขายสินค้าอิตาลี ยอดขายไวน์ดีเยี่ยม และมีห้องพักชั้นบนเหมาะทำเกสต์เฮาส์</p>
-      <h2>รายละเอียดรวม</h2>
-      <ul>
-        <li>ร้านอาหารและพิซซ่า พร้อมลูกค้าประจำ</li>
-        <li>ร้านขายของอิตาเลียน เช่น ชีส แฮม น้ำมันมะกอก</li>
-        <li>มีซัพพลายเออร์โดยตรง</li>
-        <li>ค่าเช่าถูก: 13,000 บาท/เดือน</li>
-        <li>ชั้นบนมี 8 ห้องนอน 6 ห้องน้ำ – ทำเกสต์เฮาส์ได้</li>
-        <li>ครัวครบชุด, ห้องอาหารแอร์, พื้นที่นั่งนอกอาคารกว้างขวาง</li>
-        <li>มีการฝึกอบรม 2–4 สัปดาห์</li>
-        <li><strong>ราคาขาย: 1,500,000 บาท (ต่อรองได้)</strong></li>
-      </ul>
-    </section>
-
-    <h2>📞 Contacts</h2>
-    <div class="contact-links">
-      <p><strong>📌 English/Italian:</strong></p>
-      <a href="tel:+66626216640">📞 +66 (0)626216640</a>
-      <a href="https://wa.me/66626216640" target="_blank">💬 WhatsApp</a>
-
-      <p><strong>📌 Thai:</strong></p>
-      <a href="tel:+66658090098">📞 +66 (0)658090098</a>
-      <a href="https://wa.me/66658090098" target="_blank">💬 WhatsApp</a>
+  <section>
+    <div id="description-en">
+      <p><strong>Fully operational Italian restaurant & pizzeria with regular clientele</strong></p>
+      <p>Attached shop selling Italian products (cheese, cold cuts, oil, etc.)</p>
+      <p>Strong wine sales with direct import connections</p>
+      <p>Spacious outdoor seating area (dehor)</p>
+      <p>Indoor dining area with air conditioning</p>
+      <p>Fully equipped kitchen with all professional tools included</p>
+      <p>Upper floors: 8 rooms, 6 bathrooms – easily convertible into a guesthouse</p>
+      <p>Low rent: only 13,000 THB/month</p>
+      <p>2–4 weeks of training and business handover included</p>
+      <p>Financial proof available upon request</p>
+      <p><strong>Asking Price: 1,500,000 THB (negotiable)</strong></p>
+      <p>📍 Located in Buriram, a growing city known for hosting major events such as MotoGP, the Buriram Marathon, and home to Thailand’s most successful football team, Buriram United.</p>
     </div>
 
-    <h2>Gallery</h2>
-    <div class="gallery">
-      <a href="ristorante.jpg" data-lightbox="gallery"><img src="ristorante.jpg" alt="Ristorante" /></a>
-      <a href="interno1.jpg" data-lightbox="gallery"><img src="interno1.jpg" alt="Sala Interna" /></a>
-      <a href="dehor.jpg" data-lightbox="gallery"><img src="dehor.jpg" alt="Dehor Esterno" /></a>
-      <a href="prodotti.jpg" data-lightbox="gallery"><img src="prodotti.jpg" alt="Prodotti Italiani" /></a>
+    <div id="description-it" style="display:none">
+      <p><strong>Ristorante e pizzeria italiana completamente operativa con clientela fedele</strong></p>
+      <p>Negozio annesso con vendita di prodotti italiani (formaggi, salumi, olio, ecc.)</p>
+      <p>Vendita di vini con contatti diretti per l'importazione</p>
+      <p>Ampio dehor esterno</p>
+      <p>Sala interna climatizzata</p>
+      <p>Cucina completa di strumenti professionali</p>
+      <p>Piani superiori: 8 stanze, 6 bagni – facilmente convertibile in affittacamere</p>
+      <p>Affitto basso: solo 13.000 THB/mese</p>
+      <p>Incluso affiancamento da 2 a 4 settimane</p>
+      <p>Prova dei guadagni disponibile su richiesta</p>
+      <p><strong>Prezzo richiesto: 1.500.000 THB (trattabili)</strong></p>
+      <p>📍 Situato a Buriram, città in crescita che ospita eventi importanti come MotoGP, la Maratona di Buriram e la squadra più titolata della Thailandia: Buriram United.</p>
     </div>
-  </div>
+
+    <div id="description-th" style="display:none">
+      <p><strong>ร้านอาหารอิตาเลียนและพิซซ่าพร้อมดำเนินกิจการ มีลูกค้าประจำ</strong></p>
+      <p>ร้านค้าแนบขายสินค้าอิตาเลียน (ชีส แฮม น้ำมัน ฯลฯ)</p>
+      <p>มียอดขายไวน์สูง พร้อมแหล่งนำเข้าโดยตรง</p>
+      <p>มีที่นั่งกลางแจ้งกว้างขวาง</p>
+      <p>ห้องอาหารในร่มพร้อมเครื่องปรับอากาศ</p>
+      <p>ห้องครัวครบครันด้วยอุปกรณ์มืออาชีพ</p>
+      <p>ชั้นบน: 8 ห้องนอน 6 ห้องน้ำ – ดัดแปลงเป็นเกสต์เฮ้าส์ได้ง่าย</p>
+      <p>ค่าเช่ารายเดือนเพียง 13,000 บาท</p>
+      <p>มีการฝึกอบรมและส่งมอบธุรกิจ 2–4 สัปดาห์</p>
+      <p>แสดงรายรับได้ตามคำขอ</p>
+      <p><strong>ราคาขาย: 1,500,000 บาท (ต่อรองได้)</strong></p>
+      <p>📍 ตั้งอยู่ที่บุรีรัมย์ เมืองที่จัดงานระดับประเทศ เช่น MotoGP, มาราธอนบุรีรัมย์ และเป็นที่ตั้งของทีมฟุตบอลที่ประสบความสำเร็จที่สุดในไทย Buriram United</p>
+    </div>
+  </section>
+
+  <section class="gallery">
+    <a href="images/gallery1.jpg" data-lightbox="restaurant-gallery">
+      <img src="images/gallery1.jpg" alt="Restaurant Photo 1" />
+    </a>
+    <a href="images/gallery2.jpg" data-lightbox="restaurant-gallery">
+      <img src="images/gallery2.jpg" alt="Restaurant Photo 2" />
+    </a>
+    <a href="images/gallery3.jpg" data-lightbox="restaurant-gallery">
+      <img src="images/gallery3.jpg" alt="Restaurant Photo 3" />
+    </a>
+    <a href="images/gallery4.jpg" data-lightbox="restaurant-gallery">
+      <img src="images/gallery4.jpg" alt="Restaurant Photo 4" />
+    </a>
+    <a href="images/gallery5.jpg" data-lightbox="restaurant-gallery">
+      <img src="images/gallery5.jpg" alt="Restaurant Photo 5" />
+    </a>
+  </section>
 
   <footer>
-    <p>© 2025 Italian Restaurant Buriram</p>
+    <p><strong>📞 Contacts:</strong></p>
+    <p>🇮🇹 🇬🇧 +66 (0) 626 216 640 – <a href="https://wa.me/66626216640" target="_blank">WhatsApp</a> 
+    <p>🇹🇭 +66 (0) 658 090 098 – <a href="https://wa.me/66658090098" target="_blank">WhatsApp</a>
   </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
   <script>
     function switchLang(lang) {
-      document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
-      document.getElementById(lang).classList.add('active');
+      document.getElementById('description-en').style.display = 'none';
+      document.getElementById('description-it').style.display = 'none';
+      document.getElementById('description-th').style.display = 'none';
+      document.getElementById('description-' + lang).style.display = 'block';
     }
   </script>
 </body>
+
 </html>
