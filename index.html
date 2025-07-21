@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Italian Restaurant for Sale - Buriram</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fdfdfd;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    header {
+      background: #b52e31;
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+    }
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: #b52e31;
+    }
+    ul {
+      line-height: 1.8;
+    }
+    .price {
+      font-size: 1.4rem;
+      color: #000;
+      font-weight: bold;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      background: #f1f1f1;
+      margin-top: 2rem;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+    .gallery a img {
+      max-width: 200px;
+      height: auto;
+      border-radius: 8px;
+    }
+    .lang-switcher {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    .lang-switcher button {
+      margin: 0 5px;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 5px;
+      background: #b52e31;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="title">Italian Restaurant & Deli for Sale</h1>
+    <p id="subtitle">Located in Buriram, Thailand – Low Rent, Full Package</p>
+  </header>
+
+  <div class="lang-switcher">
+    <button onclick="setLang('en')">English</button>
+    <button onclick="setLang('it')">Italiano</button>
+    <button onclick="setLang('th')">ไทย</button>
+  </div>
+
+  <section>
+    <h2 id="welcome-title">Welcome</h2>
+    <p id="welcome-text">Own your dream Italian restaurant in the heart of Buriram – a city that hosts major events like MotoGP, the Buriram Marathon, and is home to Thailand’s top football club, Buriram United.</p>
+  </section>
+
+  <section>
+    <h2 id="whats-included">What's Included</h2>
+    <ul id="included-list">
+      <li>Fully operational Italian restaurant & pizzeria with regular clientele</li>
+      <li>Attached shop selling Italian products (cheese, cold cuts, oil, etc.)</li>
+      <li>Strong wine sales with direct importer contacts</li>
+      <li>Spacious outdoor seating area (dehor)</li>
+      <li>Indoor dining room with air conditioning</li>
+      <li>Fully equipped kitchen with all professional tools</li>
+      <li>Upstairs: 8 rooms and 6 bathrooms – perfect for a guesthouse</li>
+      <li>Low monthly rent: 13,000 THB</li>
+      <li>2–4 weeks of full training and handover included</li>
+    </ul>
+    <p class="price" id="price">Asking Price: 1,500,000 THB (negotiable)</p>
+  </section>
+
+  <section>
+    <h2 id="financials-title">Financials & Support</h2>
+    <p id="financials-text">Proven income and financial records available in private. Full transition training, recipe handover, supplier contacts and setup included.</p>
+  </section>
+
+  <section>
+    <h2 id="gallery-title">Gallery</h2>
+    <div class="gallery">
+      <a href="ristorante.jpg" data-lightbox="gallery"><img src="ristorante.jpg" alt="Restaurant"></a>
+      <a href="pizzeria.jpg" data-lightbox="gallery"><img src="pizzeria.jpg" alt="Pizzeria"></a>
+      <a href="shop.jpg" data-lightbox="gallery"><img src="shop.jpg" alt="Deli Shop"></a>
+    </div>
+  </section>
+
+  <section>
+    <h2 id="contact-title">Contact</h2>
+    <p id="contact-text">📲 Contact us via <strong>Facebook</strong> or <strong>Line</strong> for more details, photos, and to arrange a visit.<br>
+    📧 Email available upon request.<br>
+    📍 Location: Buriram, Thailand</p>
+  </section>
+
+  <footer>
+    &copy; 2025 Italian Restaurant For Sale – Buriram
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+  <script>
+    const translations = {
+      en: {
+        title: "Italian Restaurant & Deli for Sale",
+        subtitle: "Located in Buriram, Thailand – Low Rent, Full Package",
+        "welcome-title": "Welcome",
+        "welcome-text": "Own your dream Italian restaurant in the heart of Buriram – a city that hosts major events like MotoGP, the Buriram Marathon, and is home to Thailand’s top football club, Buriram United.",
+        "whats-included": "What's Included",
+        "included-list": [
+          "Fully operational Italian restaurant & pizzeria with regular clientele",
+          "Attached shop selling Italian products (cheese, cold cuts, oil, etc.)",
+          "Strong wine sales with direct importer contacts",
+          "Spacious outdoor seating area (dehor)",
+          "Indoor dining room with air conditioning",
+          "Fully equipped kitchen with all professional tools",
+          "Upstairs: 8 rooms and 6 bathrooms – perfect for a guesthouse",
+          "Low monthly rent: 13,000 THB",
+          "2–4 weeks of full training and handover included"
+        ],
+        price: "Asking Price: 1,500,000 THB (negotiable)",
+        "financials-title": "Financials & Support",
+        "financials-text": "Proven income and financial records available in private. Full transition training, recipe handover, supplier contacts and setup included.",
+        "gallery-title": "Gallery",
+        "contact-title": "Contact",
+        "contact-text": "📲 Contact us via Facebook or Line for more details, photos, and to arrange a visit.\n📧 Email available upon request.\n📍 Location: Buriram, Thailand"
+      },
+      it: {
+        title: "Vendesi Ristorante & Negozio Italiano",
+        subtitle: "A Buriram, Thailandia – Affitto Basso, Pronto all'Uso",
+        "welcome-title": "Benvenuto",
+        "welcome-text": "Realizza il sogno di avere un ristorante italiano a Buriram – città che ospita eventi importanti come la MotoGP, la maratona di Buriram e la squadra più titolata di calcio in Thailandia, il Buriram United.",
+        "whats-included": "Cosa è Incluso",
+        "included-list": [
+          "Ristorante e pizzeria avviati con clientela fidelizzata",
+          "Negozio annesso con prodotti italiani (formaggi, salumi, olio, ecc.)",
+          "Buone vendite di vino, contatti diretti con importatori",
+          "Ampio spazio esterno (dehor)",
+          "Sala interna con aria condizionata",
+          "Cucina attrezzata professionalmente",
+          "8 stanze e 6 bagni al piano superiore – ideale per guesthouse",
+          "Affitto mensile basso: 13.000 THB",
+          "Formazione e affiancamento 2–4 settimane inclusi"
+        ],
+        price: "Prezzo richiesto: 1.500.000 THB (trattabile)",
+        "financials-title": "Finanze & Supporto",
+        "financials-text": "Prove di incasso disponibili in privato. Inclusi formazione, ricettario e contatti fornitori.",
+        "gallery-title": "Galleria",
+        "contact-title": "Contatti",
+        "contact-text": "📲 Contattaci via Facebook o Line per maggiori dettagli, foto e visita.\n📧 Email su richiesta.\n📍 Località: Buriram, Thailandia"
+      },
+      th: {
+        title: "ขายกิจการร้านอาหารอิตาเลียน + เดลี่",
+        subtitle: "ตั้งอยู่ที่บุรีรัมย์ ประเทศไทย – ค่าเช่าต่ำ พร้อมดำเนินการ",
+        "welcome-title": "ยินดีต้อนรับ",
+        "welcome-text": "โอกาสเป็นเจ้าของร้านอาหารอิตาเลียนในเมืองบุรีรัมย์ เมืองที่มีงานใหญ่ระดับโลกอย่าง MotoGP, มาราธอนบุรีรัมย์ และเป็นที่ตั้งของสโมสรฟุตบอลชั้นนำ Buriram United",
+        "whats-included": "รายละเอียดธุรกิจ",
+        "included-list": [
+          "ร้านอาหารอิตาเลียนที่ดำเนินงานอยู่พร้อมลูกค้าประจำ",
+          "มีร้านขายสินค้านำเข้าจากอิตาลี (ชีส แฮม น้ำมันมะกอก ฯลฯ)",
+          "ยอดขายไวน์ดี มีแหล่งนำเข้าตรง",
+          "มีพื้นที่นั่งด้านนอกกว้างขวาง",
+          "ห้องอาหารภายในติดแอร์",
+          "ครัวพร้อมอุปกรณ์ครบชุด",
+          "ชั้นบนมี 8 ห้องนอน 6 ห้องน้ำ – เหมาะแก่การทำเกสต์เฮาส์",
+          "ค่าเช่าเพียง 13,000 บาทต่อเดือน",
+          "มีการฝึกอบรมและแนะนำ 2–4 สัปดาห์"
+        ],
+        price: "ราคาขาย: 1,500,000 บาท (ต่อรองได้)",
+        "financials-title": "ข้อมูลการเงิน & การสนับสนุน",
+        "financials-text": "มีรายได้ให้ตรวจสอบในส่วนตัว พร้อมถ่ายทอดความรู้ สูตรอาหาร และซัพพลายเออร์",
+        "gallery-title": "แกลเลอรี่",
+        "contact-title": "ติดต่อ",
+        "contact-text": "📲 ติดต่อผ่าน Facebook หรือ Line เพื่อดูข้อมูลเพิ่มเติมและรูปภาพ\n📧 อีเมลสามารถขอได้\n📍 สถานที่: บุรีรัมย์ ประเทศไทย"
+      }
+    };
+
+    function setLang(lang) {
+      const t = translations[lang];
+      document.getElementById('title').innerText = t.title;
+      document.getElementById('subtitle').innerText = t.subtitle;
+      document.getElementById('welcome-title').innerText = t["welcome-title"];
+      document.getElementById('welcome-text').innerText = t["welcome-text"];
+      document.getElementById('whats-included').innerText = t["whats-included"];
+      const list = document.getElementById('included-list');
+      list.innerHTML = t["included-list"].map(item => `<li>${item}</li>`).join('');
+      document.getElementById('price').innerText = t.price;
+      document.getElementById('financials-title').innerText = t["financials-title"];
+      document.getElementById('financials-text').innerText = t["financials-text"];
+      document.getElementById('gallery-title').innerText = t["gallery-title"];
+      document.getElementById('contact-title').innerText = t["contact-title"];
+      document.getElementById('contact-text').innerText = t["contact-text"].replace(/\n/g, '<br>');
+    }
+  </script>
+</body>
+</html>
